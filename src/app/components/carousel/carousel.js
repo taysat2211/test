@@ -12,21 +12,19 @@ function carousel(props) {
           if(index == 0) {
             return (
               <div className="carousel-item active" key={index}>
-                <img
-                  src={item}
-                  className="d-block w-100 object-fit-cover" 
-                  alt={"carousel " + index}
-                />
+                <video autoPlay muted loop>
+                  <source src={item.src} type="video/mp4"/>
+                  item.title ? item.title : ''
+                </video>
               </div>
             )
           } else {
             return (
               <div className="carousel-item" key={index}>
-                <img
-                  src={item}
-                  className={"d-block w-100 object-fit-cover" } 
-                  alt={"carousel " + index}
-                />
+                <video autoPlay muted loop>
+                  <source src={item.src} type="video/mp4"/>
+                  item.title ? item.title : ''
+                </video>
               </div>
             );
 

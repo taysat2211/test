@@ -1,28 +1,28 @@
-.top {
-    background-color: yellow;
-    width: 100%;
-}
-.top .slogan{
-    width: 40%;
-}
-.top .cart{
-    width: auto;
-    padding: 0 10px;
-}
+
 .cart div {
     display: inline-block;
     padding: 0 15px;
     border-left: 1px solid darkgray;
 }
-.logo{
-    width: 30%;
-    background-color: black;
-}
-.navbar .logo{
-    background-color: black;
-    width: 10%;
-}
 
 li.nav-item{
     width: max-content;
+}
+
+.header-custom {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.logo {
+    z-index: 1;
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 100%;
+}
+
+.logo > img {
+    width: 8%;
+    display: block;
+    margin: auto;
 }

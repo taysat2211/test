@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './card.css';
 
 function Card(props) {
-    const {image,title} = props.design;
+    const {image,title, address} = props.design;
   return (
-    <div className={"card text-center h-50"}>
-        <img src={image} className="card-img-top" alt="thumb"></img>
+    <a className="card text-end" href="#">
+        <img src={image} className="card-img" alt="thumb"></img>
         <div className="card-body">
-          <h3 className='card-title'>{title}</h3>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
+          <b className='card-title'>{title}</b>
+          <p>{address}</p>
         </div>
-    </div>
+    </a>
   )
 }
 

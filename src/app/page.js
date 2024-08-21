@@ -2,16 +2,25 @@
 import "./page.css";
 import Carousel from "./components/carousel/carousel";
 import Section from "./components/section/section";
-import Article from "./components/article/article";
-import Card from "./components/card/card";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 import ZoomImage from "./components/zoom-image/zoom-image";
+import Slide from "./components/slide/slide";
 
 export default function Home() {
   const carouselItems = [
-    "carousel1.jpg",
-    "carousel2.jpg",
-    "carousel3.jpg",
-    "carousel4.jpg",
+    {
+      src: "1.mp4",
+      title: "Biệt thự"
+    },
+    {
+      src: "2.mp4",
+      title: "Văn phòng"
+    },
+    {
+      src: "3.mp4",
+      title: "Cửa hàng"
+    }
   ];
   const about = {
     title: "Giới thiệu",
@@ -23,82 +32,106 @@ export default function Home() {
   };
   const designs = [
     {
-      image: "leopard-thumb.jpg",
-      title: "thiết kế",
+      image: '/assets/images/project/ag-coffee/2.jpg',
+      title: "AG Coffee",
+      address: "Quận 1"
+    },
+    {
+      image: "/assets/images/project/avu-house/3.jpg",
+      title: "AVU House",
+      address: "Hà Nội"
+    },
+    {
+      image: "/assets/images/project/ymc-louge/thumb.jpg",
+      title: "YMC LOUGE",
+      address: "Quận 1"
+    },
+    {
+      image: "/assets/images/project/master-villa/1.jpg",
+      title: "Master Villa",
+      address: "Quận 3"
+    },
+    {
+      image: "/assets/images/project/english-center/1.jpg",
+      title: "English Center",
+      address: "Quận 1"
+    },
+    {
+      image: "/assets/images/project/pq/1.jpg",
+      title: "MILKTEA PQ",
+      address: "Quận 7"
     },
     {
       image: "leopard-thumb.jpg",
-      title: "thiết kế",
-    },
-    {
-      image: "leopard-thumb.jpg",
-      title: "thiết kế",
-    },
-    {
-      image: "leopard-thumb.jpg",
-      title: "thiết kế",
-    },
-  ];
-  const partner = [
-    {
-      src: "carousel1.jpg",
-      alt: "thumbnail"
-    },
-    {
-      src: "carousel1.jpg",
-      alt: "thumbnail"
-    },
-    {
-      src: "carousel1.jpg",
-      alt: "thumbnail"
+      title: "JACKPOT",
+      address: "Tân Bình"
     }
-  ]
+  ];
+  // const partner = [
+  //   {
+  //     src: "carousel1.jpg",
+  //     alt: "thumbnail"
+  //   },
+  //   {
+  //     src: "carousel1.jpg",
+  //     alt: "thumbnail"
+  //   },
+  //   {
+  //     src: "carousel1.jpg",
+  //     alt: "thumbnail"
+  //   }
+  // ]
   return (
     <div>
+      <Header />
       <Carousel carouselItems={carouselItems} />
-      {/* <Section title="Xin chào" subtitle="Hello" link="/">
-        <Article item={about} />
-        <div className="col container">
-          <h2>CHUYÊN THIẾT KẾ-THI CÔNG</h2>
-          <div className="row gx-1 cate-show">
-            <div className="col">
-              <img src="leopard-thumb.jpg" className="cate-full" alt="thumb" />
-            </div>
-            <div className="col">
-              <img src="leopard-thumb.jpg" className="cate-full" alt="thumb" />
-            </div>
-            <div className="col">
-              <div className="row gy-1">
-                <img
-                  src="leopard-thumb.jpg"
-                  className="cate-half"
-                  alt="thumb"
-                />
-                <img
-                  src="leopard-thumb.jpg"
-                  className="cate-half"
-                  alt="thumb"
-                />
-              </div>
-            </div>
+      <div className="product-portfolio">
+        <div className="container">
+          <div className="row g-2">
+          <div className="col">
+            <ZoomImage src="leopard-thumb.jpg" alt="Nhà phố" link="#"/>
+          </div>
+          <div className="col">
+            <ZoomImage src="leopard-thumb.jpg" alt="Nhà phố" link="#"/>
+          </div>
+          <div className="col">
+            <ZoomImage src="leopard-thumb.jpg" alt="Nhà phố" link="#"/>
+          </div>
+          <div className="col">
+            <ZoomImage src="leopard-thumb.jpg" alt="Nhà phố" link="#"/>
+          </div>
           </div>
         </div>
-      </Section> */}
-      <Section
-        title="Một số thiết kế nổi bật"
-        subtitle="Xem tất cả dự án"
-        link="/category"
-      >
-        <div className="container px-3 section-content">
-          <div className="row row-cols-3">
-            {designs.map((item, index) => (
-              <div key={index} className="col">
-                <Card design={item} />
-              </div>
-            ))}
+        <h2>Chuyên thiết kế thi công</h2>
+        <div className="container">
+          <div className="row g-2">
+          <div className="col">
+            <ZoomImage src="leopard-thumb.jpg" alt="Nhà phố" link="#"/>
+          </div>
+          <div className="col">
+            <ZoomImage src="leopard-thumb.jpg" alt="Nhà phố" link="#"/>
+          </div>
+          <div className="col">
+            <ZoomImage src="leopard-thumb.jpg" alt="Nhà phố" link="#"/>
+          </div>
+          <div className="col">
+            <ZoomImage src="leopard-thumb.jpg" alt="Nhà phố" link="#"/>
+          </div>
           </div>
         </div>
-      </Section>
+        <p className="mt-3">Liên hệ Vconcept để được tư vấn và báo thủ</p>
+        <a className="register-button mt-3 px-5">
+          ĐĂNG KÝ TƯ VẤN & BÁO GIÁ
+        </a>
+      </div>
+
+      {/* khúc thứ 3: dự án nổi bật và tin tức */}
+      <div>
+        <Section title="Dự án nổi bật">
+          <Slide items={designs}/>
+        </Section>
+      </div>
+
       {/* <Section
         title="VIDEO CÔNG TRÌNH THỰC TẾ"
         subtitle="LINK YOUTUBE"
@@ -112,28 +145,14 @@ export default function Home() {
           ))
         }
       </Section> */}
-      <Section
+      {/* <Section
         title="QUY TRÌNH LÀM VIỆC VỚI KHÁCH HÀNG"
         subtitle="ĐĂNG KÝ TƯ VẤN"
         link="/contact"
       >
-      </Section>
-      <img src="carousel2.jpg" alt="quy trình làm việc" className="process" />
-      <Section
-        title="Đối tác"
-        subtitle="Xem thêm"
-        link="/"
-      >
-        <div className="row row-cols-3 mt-3">
-          {
-            partner.map((item, index) => (
-              <div key={index} className="col">
-                <ZoomImage src={item.src} alt={item.alt} />
-              </div>
-            ))
-          }
-        </div>
-      </Section>
+      </Section> */}
+      {/* <img src="carousel2.jpg" alt="quy trình làm việc" className="process" /> */}
+      <Footer />
     </div>
   );
 }
