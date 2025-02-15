@@ -8,6 +8,7 @@ import ZoomImage from "./components/zoom-image/zoom-image";
 import Slide from "./components/slide/slide";
 
 export default function Home() {
+
   const carouselItems = [
     {
       src: "1.mp4",
@@ -22,42 +23,42 @@ export default function Home() {
       title: "Cửa hàng"
     }
   ];
-  const about = {
-    title: "Giới thiệu",
-    description:
-      "Thành lập năm 2018, hơn 4 năm kinh nghiệm trong lĩnh vực thiết kế kiến trúc nội thất tại Việt Nam, Ô Vuông mang đến những giá trị sống mới, chuẩn mực mới, hãy để chúng tôi mang đến giá trị tinh thần và sự bền vững cho không gian sống của bạn. Mang đến những công trình thi công chất lượng cao và sắc nét, tự tin làm hài lòng những vị khách hàng khó tính nhất." +
-      "<br>" +
-      "Liên hệ để được tư vấn cùng chuyên gia",
-    directContent: "Đăng ký tư vấn",
-  };
+  // const about = {
+  //   title: "Giới thiệu",
+  //   description:
+  //     "Thành lập năm 2018, hơn 4 năm kinh nghiệm trong lĩnh vực thiết kế kiến trúc nội thất tại Việt Nam, Ô Vuông mang đến những giá trị sống mới, chuẩn mực mới, hãy để chúng tôi mang đến giá trị tinh thần và sự bền vững cho không gian sống của bạn. Mang đến những công trình thi công chất lượng cao và sắc nét, tự tin làm hài lòng những vị khách hàng khó tính nhất." +
+  //     "<br>" +
+  //     "Liên hệ để được tư vấn cùng chuyên gia",
+  //   directContent: "Đăng ký tư vấn",
+  // };
   const designs = [
     {
-      image: '/assets/images/project/ag-coffee/2.jpg',
+      image: '../assets/images/project/ag-coffee/2.jpg',
       title: "AG Coffee",
       address: "Quận 1"
     },
     {
-      image: "/assets/images/project/avu-house/3.jpg",
+      image: "../assets/images/project/avu-house/3.jpg",
       title: "AVU House",
       address: "Hà Nội"
     },
     {
-      image: "/assets/images/project/ymc-louge/thumb.jpg",
+      image: "../assets/images/project/ymc-louge/thumb.jpg",
       title: "YMC LOUGE",
       address: "Quận 1"
     },
     {
-      image: "/assets/images/project/master-villa/1.jpg",
+      image: "../assets/images/project/master-villa/1.jpg",
       title: "Master Villa",
       address: "Quận 3"
     },
     {
-      image: "/assets/images/project/english-center/1.jpg",
+      image: "../assets/images/project/english-center/1.jpg",
       title: "English Center",
       address: "Quận 1"
     },
     {
-      image: "/assets/images/project/pq/1.jpg",
+      image: "../assets/images/project/pq/1.jpg",
       title: "MILKTEA PQ",
       address: "Quận 7"
     },
@@ -119,7 +120,7 @@ export default function Home() {
           </div>
           </div>
         </div>
-        <p className="mt-3">Liên hệ Vconcept để được tư vấn và báo thủ</p>
+        <p className="mt-3">Liên hệ Vconcept để được tư vấn và báo giá</p>
         <a className="register-button mt-3 px-5">
           ĐĂNG KÝ TƯ VẤN & BÁO GIÁ
         </a>
