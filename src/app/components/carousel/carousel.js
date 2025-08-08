@@ -12,7 +12,7 @@ function carousel(props) {
           if(index == 0) {
             return (
               <div className="carousel-item active" key={index}>
-                <video autoPlay muted loop>
+                <video autoPlay muted loop playsInline className="w-100 h-100 object-fit-cover">
                   <source src={item.src} type="video/mp4"/>
                   item.title ? item.title : ''
                 </video>
@@ -21,7 +21,7 @@ function carousel(props) {
           } else {
             return (
               <div className="carousel-item" key={index}>
-                <video autoPlay muted loop>
+                <video autoPlay muted loop playsInline className="w-100 h-100 object-fit-cover">
                   <source src={item.src} type="video/mp4"/>
                   item.title ? item.title : ''
                 </video>
@@ -32,7 +32,7 @@ function carousel(props) {
           })}
       </div>
       <button
-        className="carousel-control-prev"
+        className="carousel-control-prev carousel-button"
         type="button"
         data-bs-target="#carousel"
         data-bs-slide="prev"
@@ -41,7 +41,7 @@ function carousel(props) {
         <span className="visually-hidden">Previous</span>
       </button>
       <button
-        className="carousel-control-next"
+        className="carousel-control-next carousel-button"
         type="button"
         data-bs-target="#carousel"
         data-bs-slide="next"

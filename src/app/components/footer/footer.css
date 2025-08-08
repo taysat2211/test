@@ -1,5 +1,7 @@
 .summary {
   background-color: rgb(57, 62, 70);
+  margin: 0;
+  padding: 0;
 }
 .copyright {
   background-color: #262626;

@@ -7,6 +7,7 @@
 
 li.nav-item{
     width: max-content;
+    color: aliceblue;
 }
 
 .header-custom {
@@ -17,12 +18,22 @@ li.nav-item{
 
 .logo {
     z-index: 1;
-    background-color: rgb(255, 255, 255, 0.5);
-    width: 100%;
+    background-color: rgb(255, 255, 255, 0);
 }
 
-.logo > img {
+img.logo {
     width: 8%;
-    display: block;
     margin: auto;
+}
+
+.custom-dropdown {
+    background-color: #34282C;
+}
+
+.dropdown-item:hover {
+    background-color: #736F6E;
+}
+
+.nav-item:hover {
+    background-color: #49413F;
 }

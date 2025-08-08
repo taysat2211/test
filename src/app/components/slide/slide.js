@@ -1,61 +1,47 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './slide.css';
 import Card from '../card/card';
 
 function Slide(props) {
 
   const items = props.items;
-  const MAX_DISPLAY_LENGTH = 4;
-  const slideLength = items.length > MAX_DISPLAY_LENGTH ? MAX_DISPLAY_LENGTH : items.length;
-  const STEP = 1;
-  
-  let [displays, setDisplays] = useState(items.slice(0,slideLength));
-  let [pos, setPos] = useState(slideLength);
+  const [index, setIndex] = useState(0);
+  const trackRef = useRef(null);
+  const intervalRef = useRef(null);
+  const maxItemDisplay = props.maxItemDisplay || 4;
+
+  const goNext = () => {
+    setIndex((prev) => prev === items.length - maxItemDisplay ? 0 : (prev + 1) );
+  };
+
+  const goPrev = () => {
+    setIndex((prev) => (prev - 1 + items.length) % items.length);
+  };
+
+   useEffect(() => {
+    intervalRef.current = setInterval(goNext, 5000);
+    return () => clearInterval(intervalRef.current);
+  }, []);
 
   useEffect(() => {
-    if(items.length > 4){
-      setInterval(() => {
-        nextSlide(STEP);
-      }, 10000);
+    const track = trackRef.current;
+    if (track) {
+      const itemWidth = window.innerWidth / maxItemDisplay;
+      track.style.transform = `translateX(-${index * itemWidth}px)`;
     }
-  },[pos]);
-  const nextSlide = (next) => {
-    let nextPos = -1;
-    let nextDisplay = [];
-    if(next && next > 0){
-      nextPos = (pos + next) <= items.length ? (pos + next) : slideLength;
-    } else {
-      nextPos = (pos + next) < MAX_DISPLAY_LENGTH ? items.length : (pos + next);
-    }
-    nextDisplay = items.slice(nextPos - 4, nextPos);
-    setPos(nextPos);
-    setDisplays(nextDisplay);
-  } 
+  }, [index, items]);
+
   return (
-    <div>
-      {
-        displays.length === 4 ? (
-        <div className="row slider">
-          <div className='slide-item'>
-            <Card design={displays[0]}/>
-          </div>
-          <div className='slide-item'><Card design={displays[1]}/></div>
-          <div className='slide-item'><Card design={displays[2]}/></div>
-          <div className='slide-item'><Card design={displays[3]}/></div>
-          
-          <a className="prev" onClick={()=>nextSlide(-STEP)}>&#10094;</a>
-          <a className="next" onClick={()=>nextSlide(STEP)}>&#10095;</a>
-      </div>
-    ) : (
-      <div className="row slider">
+    <div className="row slider">
+      <div className="slider-track" ref={trackRef}>
         {
-          displays.map((item, index) => 
-            <div className='slide-item' key={index}><Card design={item}/></div>
-          )
+        items.map((item, index) =>
+          <div className='object-fit-cover slide-item' key={index}><Card design={item} /></div>
+        )
         }
       </div>
-    )
-      }
+      <a className="prev" onClick={() => goPrev()}>&#10094;</a>
+      <a className="next" onClick={() => goNext()}>&#10095;</a>
     </div>
   )
 }
