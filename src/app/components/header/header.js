@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from '@/assets/logo.png'
 import "./header.css";
 
 function Header() {
@@ -12,10 +11,10 @@ function Header() {
         <div className="text-center" style={{ width: "33%" }}>
           <Link href="/">
             <Image
-              src='/logo.png'
+              src="/images/logo.png"
               alt="Logo"
-              height={80}
-              width={80}
+              height={120}
+              width={120}
               style={{ cursor: "pointer" }}
             />
           </Link>
