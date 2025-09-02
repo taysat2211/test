@@ -36,7 +36,7 @@ function Slide(props) {
       <div className="slider-track" ref={trackRef}>
         {
         items.map((item, index) =>
-          <div className='object-fit-cover slide-item' key={index}><Card design={item} /></div>
+          <div className='object-fit-cover slide-item' style={{width: `${100/maxItemDisplay}%`}} key={index}><Card design={item} /></div>
         )
         }
       </div>
