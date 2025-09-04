@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import BootstrapClient from "./components/BootStrapClient";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./globals.css";
+import Footer from "./components/footer/footer";
 import Head from "next/head";
 import { Metadata } from 'next';
 
@@ -22,6 +23,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="page-content">
           {children}
+        </div>
+        <div>
+          <Footer />
         </div>
         <BootstrapClient />
       </body>

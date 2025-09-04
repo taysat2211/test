@@ -72,7 +72,7 @@ export default function Home() {
     {
       image: "images/project/CELADON-APARTMENT.jpg",
       title: "CELADON CITY APARTMENT",
-      address: "Tân Phú"
+      subtitle: "Tân Phú"
     },
     {
       image: "images/project/NICKI-NGUYEN-HOUSE.jpg",
@@ -81,53 +81,91 @@ export default function Home() {
     {
       image: "images/project/PASTA-FRESCA.jpg",
       title: "PASTA FRESCA",
-      address: "Quận 2"
+      subtitle: "Quận 2"
     },
     {
       image: "images/project/CHANCOS-FASHION.jpg",
       title: "CHANCOS FASHION",
-      address: "Đà Nẵng"
+      subtitle: "Đà Nẵng"
     },
     {
       image: "images/project/avu-house/3.jpg",
       title: "AVU House",
-      address: "Hà Nội"
+      subtitle: "Hà Nội"
     },
     {
       image: "images/project/indochine-villa/2.jpg",
       title: "INDOCHINE VILLA",
-      address: "Đà Nẵng"
+      subtitle: "Đà Nẵng"
     },
     {
       image: "images/project/master-villa/1.jpg",
       title: "Master Villa",
-      address: "Quận 3"
+      subtitle: "Quận 3"
     },
     {
       image: "images/project/CLAB-COFFEE.jpg",
       title: "CLAB COFFEE",
-      address: "Tân Bình"
+      subtitle: "Tân Bình"
     },
     {
       image: "images/project/ymc-louge/thumb.jpg",
       title: "YMC LOUGE",
-      address: "Quận 1"
+      subtitle: "Quận 1"
     },
     {
       image: "images/project/english-center/1.jpg",
       title: "English Center",
-      address: "Quận 1"
+      subtitle: "Quận 1"
     },
     {
       image: "images/project/pq/1.jpg",
       title: "MILKTEA PQ",
-      address: "Quận 7"
+      subtitle: "Quận 7"
     },
     {
       image: 'images/project/ag-coffee/2.jpg',
       title: "AG Coffee",
-      address: "Quận 1"
+      subtitle: "Quận 1"
     }
+  ];
+
+  const news = [
+    {
+      image: "images/project/CELADON-APARTMENT.jpg",
+      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
+      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+    },
+    {
+      image: "images/project/CELADON-APARTMENT.jpg",
+      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
+      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+    },
+    {
+      image: "images/project/CELADON-APARTMENT.jpg",
+      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
+      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+    },
+    {
+      image: "images/project/CELADON-APARTMENT.jpg",
+      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
+      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+    },
+    {
+      image: "images/project/CELADON-APARTMENT.jpg",
+      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
+      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+    },
+    {
+      image: "images/project/CELADON-APARTMENT.jpg",
+      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
+      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+    },
+    {
+      image: "images/project/CELADON-APARTMENT.jpg",
+      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
+      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+    },
   ];
   return (
     <div>
@@ -139,21 +177,21 @@ export default function Home() {
             {categories && categories.slice(0, 4).map(item => (
               <div className="col card h-30" key={item.id}>
                 <ZoomImage className="card-img" src={item.src} alt={item.name} link="#" />
-                <div className="card-body" style={{height: '10%', padding: '0'}}>
-                  <b className='card-title' style={{verticalAlign: 'middle'}}>{item.name}</b>
+                <div className="card-body" style={{ height: '10%', padding: '0' }}>
+                  <b className='card-title' style={{ verticalAlign: 'middle' }}>{item.name}</b>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <h2 className="mt-2">Chuyên thiết kế thi công</h2>
+        <h2 className="mt-2 bolder-text">Chuyên thiết kế thi công</h2>
         <div className="container-fluid">
           <div className="row g-2 h-30">
             {categories && categories.slice(4, 8).map(item => (
               <div className="col card h-30" key={item.id}>
                 <ZoomImage className="card-img" src={item.src} alt={item.name} link="#" />
-                <div className="card-body" style={{height: '10%', padding: '0'}}>
-                  <b className='card-title' style={{verticalAlign: 'middle'}}>{item.name}</b>
+                <div className="card-body" style={{ height: '10%', padding: '0' }}>
+                  <b className='card-title' style={{ verticalAlign: 'middle' }}>{item.name}</b>
                 </div>
               </div>
             ))}
@@ -167,26 +205,27 @@ export default function Home() {
         </div>
       </div>
 
-      {/* khúc thứ 3: dự án nổi bật và tin tức */}
+      {/* Section 3: Represent project */}
       <div>
-        <Section title="Dự án nổi bật">
-          <Slide items={designs}  maxItemDisplay={5} />
+        <Section title="DỰ ÁN NỔI BẬT">
+          <Slide items={designs} maxItemDisplay={5} textAlign="text-end"/>
         </Section>
       </div>
 
-      {/* <Section
-        title="Cảm hứng thiết kế"
-        link="https://www.youtube.com/channel/UCCYZjOW59lhh_mM3VUSe4sg"
-      >
-      </Section> */}
-      <Section
-        title="QUY TRÌNH LÀM VIỆC VỚI KHÁCH HÀNG"
-        subtitle="ĐĂNG KÝ TƯ VẤN"
-        link="/contact"
-      >
-      </Section>
-      {/* <img src="carousel2.jpg" alt="quy trình làm việc" className="process" /> */}
-      <Footer />
-    </div>
+      <div>
+        <Section
+          title="TIN TỨC DLUXEHOUSE"
+          subtitle="ĐĂNG KÝ TƯ VẤN"
+          link="/contact"
+        >
+          <Slide items={news} maxItemDisplay={5} textAlign="text-center" cardBodyStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', color: 'black' }}/>
+        </Section>
+      </div>
+
+      {/* About us */}
+      <div className="mt-2">
+        <img src="images/about-us/about-us.jpg" alt="Về chúng tôi" className="banner" />
+      </div>
+    </div> 
   );
 }
