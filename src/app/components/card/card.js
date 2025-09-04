@@ -2,13 +2,14 @@ import React from 'react';
 import './card.css';
 
 function Card(props) {
-    const {image,title, address} = props.design;
+    const {image,title, subtitle, description} = props.design;
   return (
-    <a className="card text-end" href="#">
+    <a className={`card ${props.textAlign}`} href="#">
         <img src={image} className="card-img" alt="thumb"></img>
-        <div className="card-body">
+        <div className="card-body" style={props.cardBodyStyle}>
           <b className='card-title'>{title}</b>
-          <p>{address}</p>
+          {subtitle ? <p>{subtitle}</p> : null}
+          {description ? <p className='description'>{description}</p> : null}
         </div>
     </a>
   )
