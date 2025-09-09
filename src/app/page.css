@@ -24,8 +24,36 @@
    font-size: 19pt;
    font-weight: bolder;
 }
-.banner {
+.information {
     width: 100%;
-    height: 30%;
+    height: 60vh;
+    position: relative;
+
+}
+img.banner {
+    width: 100%;
+    height: 60vh;
     object-fit: cover;
+    position: absolute;
+}
+.about-us {
+    position: absolute;
+    text-align: center;
+    
+}
+.about-us .heading {
+    font-size: larger;
+    font-weight: bolder;
+}
+.about-us .content {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-style: italic;
+}
+.partner {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    bottom: 0;
 }

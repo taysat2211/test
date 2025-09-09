@@ -12,8 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   description: "Design and build",
   title: {
-    template: 'Dluxe House',
-    default: 'Vconcept',
+    template: ' | Dluxe House',
+    default: 'Dluxe House',
   },
 };
 

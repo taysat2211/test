@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
-import './slide.css';
+import './slider.css';
 import Card from '../card/card';
 
-function Slide(props) {
+function Slider(props) {
 
   const items = props.items;
   const [index, setIndex] = useState(0);
@@ -36,7 +36,7 @@ function Slide(props) {
       <div className="slider-track" ref={trackRef}>
         {
         items.map((item, index) =>
-          <div className='object-fit-cover slide-item' style={{width: `${100/maxItemDisplay}%`}} key={index}><Card design={item} textAlign={props.textAlign} cardBodyStyle={props.cardBodyStyle} /></div>
+          <div className='object-fit-cover slider-item' style={{width: `${100/maxItemDisplay}%`}} key={index}><Card design={item} textAlign={props.textAlign} cardBodyStyle={props.cardBodyStyle} /></div>
         )
         }
       </div>
@@ -46,4 +46,4 @@ function Slide(props) {
   )
 }
 
-export default Slide;
+export default Slider;
