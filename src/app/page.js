@@ -5,7 +5,8 @@ import Section from "./components/section/section";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import ZoomImage from "./components/zoom-image/zoom-image";
-import Slide from "./components/slide/slide";
+import Slider from "./components/slide/slider";
+import ImageSlider from "./components/slide/image-slider";
 
 export default function Home() {
 
@@ -167,6 +168,41 @@ export default function Home() {
       description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
     },
   ];
+
+  const partners = [
+    {
+      src: 'images/partners/1.png',
+      alt: 'Đại Phúc Group'
+    },
+    {
+      src: 'images/partners/2.png',
+      alt: 'An Cường'
+    },
+    {
+      src: 'images/partners/3.png',
+      alt: 'Dulux'
+    },
+    {
+      src: 'images/partners/4.png',
+      alt: 'Hafele'
+    },
+    {
+      src: 'images/partners/5.png',
+      alt: 'HimLam Group'
+    },
+    {
+      src: 'images/partners/6.png',
+      alt: 'Hưng Thịnh'
+    },
+    {
+      src: 'images/partners/7.png',
+      alt: 'Malloca'
+    },
+    {
+      src: 'images/partners/9.png',
+      alt: 'Blum'
+    }
+  ];
   return (
     <div>
       <Header />
@@ -208,7 +244,7 @@ export default function Home() {
       {/* Section 3: Represent project */}
       <div>
         <Section title="DỰ ÁN NỔI BẬT">
-          <Slide items={designs} maxItemDisplay={5} textAlign="text-end"/>
+          <Slider items={designs} maxItemDisplay={5} textAlign="text-end"/>
         </Section>
       </div>
 
@@ -218,13 +254,26 @@ export default function Home() {
           subtitle="ĐĂNG KÝ TƯ VẤN"
           link="/contact"
         >
-          <Slide items={news} maxItemDisplay={5} textAlign="text-center" cardBodyStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', color: 'black' }}/>
+          <Slider items={news} maxItemDisplay={5} textAlign="text-center" cardBodyStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', color: 'black' }}/>
         </Section>
       </div>
 
       {/* About us */}
-      <div className="mt-2">
+      <div className="mt-2 information">
         <img src="images/about-us/about-us.jpg" alt="Về chúng tôi" className="banner" />
+        <div className="about-us p-5">
+          <div className="heading">GIỚI THIỆU VỀ CHÚNG TÔI</div>
+          <div className="content">Công ty với đội ngũ thiết kế trẻ, nhiệt huyết, sáng tạo luôn học hỏi, cập nhật các xu hướng thiết kế và kỹ thuật mới nhất.
+             Với thế mạnh chủ lực là tư vấn thiết kế kiến trúc nội thất tinh thần trách nhiệm cao.&nbsp; 
+            <b>Dluxe House</b> đã tự tin khẳng định chất lượng dịch vụ của mình với các đối tác.
+          </div>
+        </div>
+        <div className="partner px-5 py-5">
+            <div style={{height: '100%'
+            }}>
+              <ImageSlider items={partners}/>
+            </div>
+        </div>
       </div>
     </div> 
   );
