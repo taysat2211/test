@@ -27,6 +27,17 @@ export default function RootLayout({ children }) {
         <div>
           <Footer />
         </div>
+        <div className="social-fixed">
+          <a href="https://facebook.com" target="_blank" className="social-icon fb">
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" className="social-icon ig">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="https://zalo.me" target="_blank" className="social-icon zalo">
+            <i className="fas fa-comment-dots"></i>
+          </a>
+        </div>
         <BootstrapClient />
       </body>
     </html>
