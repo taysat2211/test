@@ -268,10 +268,10 @@ export default function Home() {
             <b>Dluxe House</b> đã tự tin khẳng định chất lượng dịch vụ của mình với các đối tác.
           </div>
         </div>
-        <div className="partner px-5 py-5">
+        <div className="partner">
             <div style={{height: '100%'
             }}>
-              <ImageSlider items={partners}/>
+              <ImageSlider items={partners} maxItemDisplay={5}/>
             </div>
         </div>
       </div>
