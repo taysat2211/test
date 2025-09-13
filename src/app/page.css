@@ -52,8 +52,41 @@ img.banner {
 }
 .partner {
     width: 100%;
-    height: 40%;
+    height: 30%;
     position: absolute;
     background-color: rgba(0,0,0,0.8);
     bottom: 0;
 }
+.social-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* đổi sang left nếu cần */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: translateY(-6px); /* hiệu ứng trượt lên */
+  background-color: #007bff;
+}
+
+/* Optional: màu riêng cho từng icon */
+.social-icon.fb:hover { background-color: #1877f2; }
+.social-icon.ig:hover { background-color: #e1306c; }
+.social-icon.zalo:hover { background-color: #0068ff; }
