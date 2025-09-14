@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             <i className="fab fa-facebook-f"></i>
           </a>
           <a href="https://zalo.me/0978025395" target="_blank" className="social-icon zalo">
-            <img src="images/icons/zalo.svg"></img>
+            <i className="fa-solid fa-z"></i>
           </a>
           <a href="tel:+84978025395" target="_blank" className="social-icon phone">
             <i className="fas fa-phone"></i>
