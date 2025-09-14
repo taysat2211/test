@@ -28,14 +28,14 @@ export default function RootLayout({ children }) {
           <Footer />
         </div>
         <div className="social-fixed">
-          <a href="https://facebook.com" target="_blank" className="social-icon fb">
+          <a href="https://www.facebook.com/DluxeHouse2025" target="_blank" className="social-icon fb">
             <i className="fab fa-facebook-f"></i>
           </a>
-          <a href="https://instagram.com" target="_blank" className="social-icon ig">
-            <i className="fab fa-instagram"></i>
+          <a href="https://zalo.me/0978025395" target="_blank" className="social-icon zalo">
+            <img src="images/icons/zalo.svg"></img>
           </a>
-          <a href="https://zalo.me" target="_blank" className="social-icon zalo">
-            <i className="fas fa-comment-dots"></i>
+          <a href="tel:+84978025395" target="_blank" className="social-icon phone">
+            <i className="fas fa-phone"></i>
           </a>
         </div>
         <BootstrapClient />

@@ -57,10 +57,11 @@ img.banner {
     background-color: rgba(0,0,0,0.8);
     bottom: 0;
 }
+
 .social-fixed {
   position: fixed;
   bottom: 20px;
-  right: 20px; /* đổi sang left nếu cần */
+  right: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -82,11 +83,10 @@ img.banner {
 }
 
 .social-icon:hover {
-  transform: translateY(-6px); /* hiệu ứng trượt lên */
+  transform: translateY(-6px);
   background-color: #007bff;
 }
 
-/* Optional: màu riêng cho từng icon */
 .social-icon.fb:hover { background-color: #1877f2; }
-.social-icon.ig:hover { background-color: #e1306c; }
 .social-icon.zalo:hover { background-color: #0068ff; }
+.social-icon.phone:hover { background-color: #0068ff; }
