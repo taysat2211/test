@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
           <a href="https://zalo.me/0978025395" target="_blank" className="social-icon zalo">
             <img src="images/icons/zalo.svg"></img>
           </a>
-          <a href="tel:+84123456789" target="_blank" className="social-icon phone">
+          <a href="tel:+84978025395" target="_blank" className="social-icon phone">
             <i className="fas fa-phone"></i>
           </a>
         </div>
