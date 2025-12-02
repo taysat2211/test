@@ -36,7 +36,7 @@ function Slider(props) {
       <div className="slider-track" ref={trackRef}>
         {
         items.map((item, index) =>
-          <div className='object-fit-cover slider-item' style={{width: `${100/maxItemDisplay}%`}} key={index}><Card design={item} textAlign={props.textAlign} cardBodyStyle={props.cardBodyStyle} /></div>
+          <div className='object-fit-cover slider-item' style={{width: `${100/maxItemDisplay}%`}} key={index} onClick={() => props.onClick(item.id)}><Card design={item} textAlign={props.textAlign} cardBodyStyle={props.cardBodyStyle} /></div>
         )
         }
       </div>

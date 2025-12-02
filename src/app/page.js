@@ -7,9 +7,11 @@ import Footer from "./components/footer/footer";
 import ZoomImage from "./components/zoom-image/zoom-image";
 import Slider from "./components/slide/slider";
 import ImageSlider from "./components/slide/image-slider";
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
 
+  const router = useRouter();
   const carouselItems = [
     {
       src: "videos/1.mp4",
@@ -133,39 +135,46 @@ export default function Home() {
 
   const news = [
     {
+      id: "/news/huong-dan-xin-giay-phep-xay-dung-nha-o",
       image: "images/project/CELADON-APARTMENT.jpg",
-      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
-      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+      title: "Hướng dẫn xin giấy phép xây dựng nhà ở chi tiết 2025: Hồ sơ, Lệ phí",
+      description: "Xin giấy phép xây dựng là một trong những vấn đề pháp lý cần được tiến hành trước khi xây dựng nhà ở. Để có thể tiến hành xây dựng công trình bắt buộc phải có giấy phép xây dựng, trừ vài trường hợp đặc biệt."
     },
     {
-      image: "images/project/CELADON-APARTMENT.jpg",
-      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
-      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+      id: "/news/mau-cua-go-noi-len-dieu-gi",
+      image: "images/project/master-villa/4.jpg",
+      title: "Màu của gỗ nói lên điều gì?",
+      description: "Từ lâu, gỗ được xem như vật liệu quen thuộc trong các không gian nội thất. Mỗi loại gỗ sẽ có đặc tính sinh học và màu sắc khác nhau. Vậy màu của gỗ nói lên điều gì? Mời bạn theo dõi bài viết dưới đây để tìm hiểu chi tiết hơn nhé."
     },
     {
-      image: "images/project/CELADON-APARTMENT.jpg",
-      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
-      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+      id: "/news/loi-thiet-ke-chieu-sang",
+      image: "images/project/master-villa/3.jpg",
+      title: "3 Lỗi chiếu sáng phổ biến sẽ phá vỡ không gian nhà bạn",
+      description: "Ánh sáng là một trong những yếu tố quan trọng góp phần tạo nên giá trị thẩm mỹ cho một không gian. Tuy nhiên, trong quá trình thiết kế nội thất, nhiều gia chủ thường mắc 3 lỗi chiếu sáng phổ biến sẽ phá vỡ không gian, gây ra nhiều ảnh hưởng trong học tập, làm việc hay trong sinh hoạt hàng ngày."
     },
     {
-      image: "images/project/CELADON-APARTMENT.jpg",
-      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
-      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+      id: "/news/phong-cach-industrial",
+      image: "images/project/milktea-bd/6.jpg",
+      title: "Phong cách Industrial là gì? 13 đặc trưng của phong cách Industrial trong thiết kế nội thất",
+      description: "Nếu bạn thuộc tuýp người ưa chuộng nét đẹp mộc mạc, tự nhiên nhưng vẫn thể hiện được sự mạnh mẽ, táo bạo và tinh tế thì nên cân nhắc lựa chọn phong cách Industrial - một phong cách đang làm mưa làm gió tại thị trường Việt Nam."
     },
     {
-      image: "images/project/CELADON-APARTMENT.jpg",
-      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
-      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+      id: "/news/phong-cach-thiet-ke-co-dien",
+      image: "images/project/FLORA NOVIA APARTMENT/7.jpg",
+      title: "Phong cách thiết kế cổ điển là gì? 7 đặc trưng trong thiết kế nội thất",
+      description: "Ra đời từ rất sớm và là một trong những phong cách hiếm hoi tồn tại, phát triển vượt trội cho đến thời điểm hiện tại. Phong cách nội thất cổ điển luôn để lại cho người nhìn những ấn tượng sâu sắc bởi sự xa hoa, tráng lệ của mình."
     },
     {
-      image: "images/project/CELADON-APARTMENT.jpg",
-      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
-      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+      id: "/news/phong-cach-indochine-dong-duong",
+      image: "images/project/indochine-villa/1.jpg",
+      title: "Phong cách Indochine là gì? Đặc trưng thiết kế nội thất nhà",
+      description: "Phong cách Indochine ( Đông Dương) - bản giao hưởng đầy màu sắc giữa 2 nền văn hóa phương Đông và phương Tây sẽ khiến chúng ta phải đắm chìm khi chiêm ngưỡng. Không chỉ vì dấu ấn thời gian được thể hiện trong những mẫu thiết kế hay sự uy nghi đồ sộ mà kiến trúc Đông Dương còn giúp chúng ta “sống lại” trong một bầu trời mới, một Việt Nam rất xưa và rất riêng."
     },
     {
-      image: "images/project/CELADON-APARTMENT.jpg",
-      title: "TOP NHỮNG MẪU NHÀ ĐẸP 2025",
-      description: "Cùng Dluxe House chiêm ngưỡng những mẫu thiết kế kiến trúc đẹp"
+      id: "/news/phong-cach-thiet-ke-nhiet-doi-tropical-style",
+      image: "images/project/parkview-bd/10.jpg",
+      title: "Phong cách nhiệt đới (Tropical style) là gì? Đặc trưng phong cách Tropical trong thiết kế",
+      description: "Với đa dạng phong cách thiết kế nội thất trên thị trường hiện nay, phong cách nhiệt đới (phong cách tropical) lại nổi lên như một làn gió mới đem đến nguồn cảm hứng bất tận cho không gian sống. Với sắc xanh của mây trời, biển cả, cây cối kết hợp cùng nắng và gió phong cách tropical sẽ mang thiên nhiên, khí hậu vùng nhiệt đới vào trong căn nhà của bạn."
     },
   ];
 
@@ -203,6 +212,9 @@ export default function Home() {
       alt: 'Blum'
     }
   ];
+  const redirectToPage = (path) => {
+    router.push(path);
+  }
   return (
     <div>
       <Header />
@@ -241,7 +253,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Section 3: Represent project */}
       <div>
         <Section title="DỰ ÁN NỔI BẬT">
           <Slider items={designs} maxItemDisplay={5} textAlign="text-end"/>
@@ -251,10 +262,8 @@ export default function Home() {
       <div>
         <Section
           title="TIN TỨC DLUXEHOUSE"
-          subtitle="ĐĂNG KÝ TƯ VẤN"
-          link="/contact"
         >
-          <Slider items={news} maxItemDisplay={5} textAlign="text-center" cardBodyStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', color: 'black' }}/>
+          <Slider items={news} maxItemDisplay={5} textAlign="text-center" cardBodyStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', color: 'black' }} onClick={redirectToPage}/>
         </Section>
       </div>
 
