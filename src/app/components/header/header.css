@@ -8,10 +8,17 @@
 li.nav-item{
     width: max-content;
     color: aliceblue;
+    border-radius: 10px;
 }
 
 .header-custom {
     position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.navigation-bar {
+    position: relative;
     z-index: 1;
     width: 100%;
 }
