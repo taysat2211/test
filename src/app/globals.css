@@ -104,3 +104,9 @@ a {
 .main-width {
   width: 60%;
 }
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
