@@ -1,10 +1,31 @@
 .section-title {
    font-size: 16pt;
    font-weight: bolder;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+   .section-title {
+       font-size: 14pt;
+   }
+}
+
+@media (max-width: 576px) {
+   .section-title {
+       font-size: 12pt;
+   }
+}
 
 .section-content {
     margin: 3% 0px;
     padding: 0px;
+}
+
+@media (max-width: 576px) {
+    .section-content {
+        margin: 5% 0px;
+        padding: 0px 10px;
+    }
 }

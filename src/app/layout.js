@@ -15,6 +15,7 @@ export const metadata = {
     template: ' | Dluxe House',
     default: 'Dluxe House',
   },
+  viewport: 'width=device-width, initial-scale=1.0, maximum-scale=5.0',
 };
 
 export default function RootLayout({ children }) {

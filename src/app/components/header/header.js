@@ -5,16 +5,16 @@ import "./header.css";
 
 function Header() {
   return (
-    <nav className="header-custom navbar navbar-expand-lg px-4  mt-5 sticky-top">
+    <nav className="header-custom navbar navbar-expand-lg px-4  mt-3 sticky-top">
       <div className="container-fluid justify-content-between align-items-center">
-        <div className="d-none d-lg-block" style={{ width: "33%" }}></div>
-        <div className="text-center" style={{ width: "33%" }}>
+        <div className="d-none d-lg-block"></div>
+        <div className="text-center">
           <Link href="/">
             <Image
               src="/images/logo.png"
               alt="Logo"
-              height={120}
-              width={120}
+              height={150}
+              width={150}
               style={{ cursor: "pointer" }}
             />
           </Link>

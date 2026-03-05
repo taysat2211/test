@@ -1,5 +1,6 @@
 "use client";
 import "./page.css";
+import { useState } from 'react';
 import Carousel from "./components/carousel/carousel";
 import Section from "./components/section/section";
 import Header from "./components/header/header";
@@ -7,9 +8,13 @@ import Footer from "./components/footer/footer";
 import ZoomImage from "./components/zoom-image/zoom-image";
 import Slider from "./components/slide/slider";
 import ImageSlider from "./components/slide/image-slider";
+import ConsultationModal from "./components/modal/ConsultationModal";
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
 
+  const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const carouselItems = [
     {
       src: "videos/1.mp4",
@@ -235,9 +240,9 @@ export default function Home() {
         </div>
         <div className="">
           <p className="mt-3">Liên hệ DLUXE để được tư vấn và báo giá</p>
-          <a className="mt-3 px-5 py-2 mb-3 register-button">
+          <button className="mt-3 px-5 py-2 mb-3 register-button" onClick={() => setIsModalOpen(true)}>
             ĐĂNG KÝ TƯ VẤN & BÁO GIÁ
-          </a>
+          </button>
         </div>
       </div>
 
@@ -275,6 +280,7 @@ export default function Home() {
             </div>
         </div>
       </div>
+      <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div> 
   );
 }

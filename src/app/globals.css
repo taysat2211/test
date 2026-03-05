@@ -104,3 +104,51 @@ a {
 .main-width {
   width: 60%;
 }
+
+@media (max-width: 768px) {
+  .main-width {
+    width: 90%;
+  }
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile-First Base Styles */
+html,
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Touch-Friendly Buttons and Links */
+button, a, input[type="button"], input[type="submit"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Optimize for Mobile */
+@media (max-width: 576px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --max-width: 100%;
+  }
+}

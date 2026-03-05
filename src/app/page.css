@@ -2,14 +2,55 @@
     width: 100%;
     height: 40vh;
 }
+
+@media (max-width: 768px) {
+    .cate-full {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .cate-full {
+        height: 20vh;
+    }
+}
+
 .cate-half {
     width: 100%;
     height: 20vh;
 }
+
+@media (max-width: 768px) {
+    .cate-half {
+        height: 15vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .cate-half {
+        height: 12vh;
+    }
+}
+
 .process {
     width: 100%;
     height: 90vh;
     margin-top: 1vh;
+}
+
+@media (max-width: 768px) {
+    .process {
+        height: 60vh;
+        margin-top: 0.5vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .process {
+        height: auto;
+        padding: 20px;
+        margin-top: 0;
+    }
 }
 .product-portfolio {
     min-width: 100%;
@@ -28,18 +69,45 @@
     width: 100%;
     height: 60vh;
     position: relative;
-
 }
+
+@media (max-width: 768px) {
+    .information {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .information {
+        height: 40vh;
+    }
+}
+
 img.banner {
     width: 100%;
     height: 60vh;
     object-fit: cover;
     position: absolute;
 }
+
+@media (max-width: 768px) {
+    img.banner {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 576px) {
+    img.banner {
+        height: 40vh;
+    }
+}
 .about-us {
     position: absolute;
     text-align: center;
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
 }
 .about-us .heading {
     font-size: larger;
@@ -49,6 +117,21 @@ img.banner {
     padding-left: 20%;
     padding-right: 20%;
     font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .about-us .content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us .content {
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 0.9rem;
+    }
 }
 .partner {
     width: 100%;

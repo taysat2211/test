@@ -7,14 +7,14 @@ const Footer = () => {
   return (
       <footer className="container-fluid text-left summary">
         <div className="row p-5">
-          <div className="col-6">
-            <strong>CÔNG TY CP TƯ VẤN & THIẾT KẾ THI CÔNG DLUXE HOUSE</strong>
-            <p className="footer-text-normal">6th floor, 222 Dien Bien Phu street, District 3, Ho Chi Minh City, Viet Nam</p>
-            <p className="footer-text-normal">Mr.Vinh  0123 456 789 - Mr.Anh  0123 456 789</p>
-            <p className="footer-text-normal">TestUI@gmail.com</p>
-          </div>
           <div className="col-3">
-            <strong>DANH MỤC MENU</strong> <br />
+            <strong>CÔNG TY TNHH TK VÀ XD DLUXE HOUSE</strong>
+            <p className="footer-text-normal">Địa chỉ: 140 Cần Giuộc, phường Phú Định, TP Hồ Chí Minh, Việt Nam</p>
+            <p className="footer-text-normal">Phone: Mr.Vinh  0978 025 395 - Mr.Anh  0982 463 893</p>
+            <p className="footer-text-normal">Email: wnguyen.designer@gmail.com</p>
+          </div>
+          <div className="col-6">
+            <strong>Thiết kế kiến trúc</strong> <br />
             <a href="#">Giới thiệu</a> <br />
             <a href="#">Tin tức</a> <br />
             <a href="#">Báo giá</a> <br />

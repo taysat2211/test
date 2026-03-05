@@ -4,7 +4,25 @@
     padding: 0px;
 }
 
-.articale-card a.btn{
-    margin-left: auto;
+@media (max-width: 768px) {
+    .article-card {
+        width: 50%;
+    }
+}
 
+@media (max-width: 576px) {
+    .article-card {
+        width: 100%;
+    }
+}
+
+.articale-card a.btn {
+    margin-left: auto;
+}
+
+@media (max-width: 576px) {
+    .articale-card a.btn {
+        margin-left: 0;
+        width: 100%;
+    }
 }

@@ -5,8 +5,45 @@
 }
 .footer-text-normal {
   margin-bottom: 0;
+  font-size: 0.95rem;
 }
+
+@media (max-width: 576px) {
+  .footer-text-normal {
+    font-size: 0.85rem;
+  }
+}
+
 .copyright {
   background-color: #262626;
-  color: hsla(0,0%,100%,.5)
+  color: hsla(0,0%,100%,.5);
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+  .copyright {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Footer responsive columns */
+.footer-content {
+  display: grid;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-content {
+    gap: 15px;
+    grid-template-columns: 1fr;
+  }
 }
